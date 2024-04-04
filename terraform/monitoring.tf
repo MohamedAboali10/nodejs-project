@@ -11,11 +11,11 @@ variable "kube_monitoring_stack_values" {
         annotations:
           cert-manager.io/cluster-issuer: letsencrypt-production
         hosts:
-          - grafana.YOUR_DOMAIN.com
+          - grafana.aboali.cloud
         tls:
           - secretName: grafana-tls
             hosts:
-              - grafana.YOUR_DOMAIN.com
+              - grafana.aboali.cloud
 
     alertmanager:
       enabled: true
@@ -25,11 +25,11 @@ variable "kube_monitoring_stack_values" {
         annotations:
           cert-manager.io/cluster-issuer: letsencrypt-production
         hosts:
-          - alertmanager.YOUR_DOMAIN.com
+          - alertmanager.aboali.cloud
         tls:
           - secretName: alertmanager-tls
             hosts:
-              - alertmanager.YOUR_DOMAIN.com
+              - alertmanager.aboali.cloud
 
     prometheus:
       ingress:
@@ -38,11 +38,11 @@ variable "kube_monitoring_stack_values" {
         annotations:
           cert-manager.io/cluster-issuer: letsencrypt-production
         hosts:
-          - prometheus.YOUR_DOMAIN.com
+          - prometheus.aboali.cloud
         tls:
           - secretName: prometheus-tls
             hosts:
-              - prometheus.YOUR_DOMAIN.com
+              - prometheus.aboali.cloud
       prometheusSpec:
         replicas: 2
         replicaExternalLabelName: prometheus_replica
